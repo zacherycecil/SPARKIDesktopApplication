@@ -2,7 +2,6 @@ C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\bin\Debug\SPARKIDe
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\bin\Debug\SPARKIDesktopApp.exe
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\bin\Debug\SPARKIDesktopApp.pdb
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.csprojAssemblyReference.cache
-C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.Form1.resources
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.Properties.Resources.resources
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.csproj.GenerateResource.cache
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.csproj.CoreCompileInputs.cache
@@ -33,3 +32,10 @@ C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\bin\Debug\Xamarin.
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\XamlC.stamp
+C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.FormLoad.resources
+C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.FormChooseProfileMode.resources
+C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.FormCreateOrLoad.resources
+C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.Therapeutic.resources
+C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.FES.resources
+C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.FreeRun.resources
+C:\Users\zcjl9\source\repos\SPARKIDesktopApp\SPARKIDesktopApp\obj\Debug\SPARKIDesktopApp.FormSave.resources

@@ -1,0 +1,264 @@
+﻿
+namespace SPARKIDesktopApp
+{
+    partial class FES
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.saveButton = new System.Windows.Forms.Button();
+            this.loadButton = new System.Windows.Forms.Button();
+            this.newButton = new System.Windows.Forms.Button();
+            this.profileLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.modeLabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SyncLabel = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.profileNameLabel = new System.Windows.Forms.Label();
+            this.profileModeLabel = new System.Windows.Forms.Label();
+            this.macroLabel1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.macroCB = new System.Windows.Forms.ComboBox();
+            this.triggerCB = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.saveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(28, 32);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(167, 57);
+            this.saveButton.TabIndex = 0;
+            this.saveButton.Text = "Save Profile";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // loadButton
+            // 
+            this.loadButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.loadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadButton.Location = new System.Drawing.Point(215, 32);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(185, 56);
+            this.loadButton.TabIndex = 1;
+            this.loadButton.Text = "Load Profile";
+            this.loadButton.UseVisualStyleBackColor = false;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            // 
+            // newButton
+            // 
+            this.newButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.newButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newButton.Location = new System.Drawing.Point(422, 32);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(189, 56);
+            this.newButton.TabIndex = 2;
+            this.newButton.Text = "New Profile";
+            this.newButton.UseVisualStyleBackColor = false;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
+            // 
+            // profileLabel
+            // 
+            this.profileLabel.AutoSize = true;
+            this.profileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileLabel.Location = new System.Drawing.Point(25, 111);
+            this.profileLabel.Name = "profileLabel";
+            this.profileLabel.Size = new System.Drawing.Size(197, 29);
+            this.profileLabel.TabIndex = 3;
+            this.profileLabel.Text = "Current Profile: ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 164);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1220, 545);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // modeLabel
+            // 
+            this.modeLabel.AutoSize = true;
+            this.modeLabel.BackColor = System.Drawing.Color.DarkGray;
+            this.modeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeLabel.Location = new System.Drawing.Point(56, 190);
+            this.modeLabel.Name = "modeLabel";
+            this.modeLabel.Size = new System.Drawing.Size(86, 29);
+            this.modeLabel.TabIndex = 5;
+            this.modeLabel.Text = "Mode:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(707, 570);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(507, 106);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // SyncLabel
+            // 
+            this.SyncLabel.AutoSize = true;
+            this.SyncLabel.BackColor = System.Drawing.Color.Gray;
+            this.SyncLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SyncLabel.ForeColor = System.Drawing.Color.Red;
+            this.SyncLabel.Location = new System.Drawing.Point(736, 613);
+            this.SyncLabel.Name = "SyncLabel";
+            this.SyncLabel.Size = new System.Drawing.Size(210, 20);
+            this.SyncLabel.TabIndex = 9;
+            this.SyncLabel.Text = "There are unsaved changes.";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(1016, 595);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(167, 57);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Sync with SPARKI";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // profileNameLabel
+            // 
+            this.profileNameLabel.AutoSize = true;
+            this.profileNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileNameLabel.Location = new System.Drawing.Point(228, 111);
+            this.profileNameLabel.Name = "profileNameLabel";
+            this.profileNameLabel.Size = new System.Drawing.Size(133, 29);
+            this.profileNameLabel.TabIndex = 11;
+            this.profileNameLabel.Text = "NewProfile";
+            // 
+            // profileModeLabel
+            // 
+            this.profileModeLabel.AutoSize = true;
+            this.profileModeLabel.BackColor = System.Drawing.Color.DarkGray;
+            this.profileModeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileModeLabel.Location = new System.Drawing.Point(148, 190);
+            this.profileModeLabel.Name = "profileModeLabel";
+            this.profileModeLabel.Size = new System.Drawing.Size(354, 29);
+            this.profileModeLabel.TabIndex = 12;
+            this.profileModeLabel.Text = "Functional Electrical Stimulation";
+            // 
+            // macroLabel1
+            // 
+            this.macroLabel1.AutoSize = true;
+            this.macroLabel1.BackColor = System.Drawing.Color.DarkGray;
+            this.macroLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.macroLabel1.Location = new System.Drawing.Point(56, 246);
+            this.macroLabel1.Name = "macroLabel1";
+            this.macroLabel1.Size = new System.Drawing.Size(92, 29);
+            this.macroLabel1.TabIndex = 13;
+            this.macroLabel1.Text = "Macro:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkGray;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(293, 246);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 29);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Trigger:";
+            // 
+            // macroCB
+            // 
+            this.macroCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.macroCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.macroCB.FormattingEnabled = true;
+            this.macroCB.Location = new System.Drawing.Point(61, 298);
+            this.macroCB.Name = "macroCB";
+            this.macroCB.Size = new System.Drawing.Size(220, 28);
+            this.macroCB.TabIndex = 15;
+            // 
+            // triggerCB
+            // 
+            this.triggerCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triggerCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.triggerCB.FormattingEnabled = true;
+            this.triggerCB.Location = new System.Drawing.Point(298, 298);
+            this.triggerCB.Name = "triggerCB";
+            this.triggerCB.Size = new System.Drawing.Size(239, 28);
+            this.triggerCB.TabIndex = 16;
+            // 
+            // FES
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1279, 736);
+            this.Controls.Add(this.triggerCB);
+            this.Controls.Add(this.macroCB);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.macroLabel1);
+            this.Controls.Add(this.profileModeLabel);
+            this.Controls.Add(this.profileNameLabel);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.SyncLabel);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.modeLabel);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.profileLabel);
+            this.Controls.Add(this.newButton);
+            this.Controls.Add(this.loadButton);
+            this.Controls.Add(this.saveButton);
+            this.Name = "FES";
+            this.Text = "S.P.A.R.K.I. Windows Desktop Application";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button loadButton;
+        private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Label profileLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label modeLabel;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label SyncLabel;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label profileNameLabel;
+        private System.Windows.Forms.Label profileModeLabel;
+        private System.Windows.Forms.Label macroLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox macroCB;
+        private System.Windows.Forms.ComboBox triggerCB;
+    }
+}
+

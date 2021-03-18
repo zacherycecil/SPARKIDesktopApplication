@@ -20,7 +20,7 @@ using InTheHand.Forms;
 namespace SPARKIDesktopApp
 {
 
-    public partial class Form1 : Form
+    public partial class Therapeutic : Form
     {
 
         enum Mode
@@ -144,12 +144,6 @@ namespace SPARKIDesktopApp
             form.MaximizeBox = false;
             form.CancelButton = buttonCancel;
 
-            if (!profileLoaded)
-            {
-                // close app if closed during profile select
-                form.FormClosed += CloseAppOnCancel;
-            }
-
             DialogResult dialogResult = form.ShowDialog();
             return dialogResult;
         }
@@ -177,7 +171,7 @@ namespace SPARKIDesktopApp
             form.Text = "Mode Selection";
             label.Text = "Choose a mode for the profile:";
             buttonTherapeutic.Text = "Therapeutic";
-            buttonFES.Text = "Functional Electrical Stimualtion";
+            buttonFES.Text = "FES";
             buttonFreeRun.Text = "Free-Run";
 
             label.AutoSize = true;
@@ -192,12 +186,6 @@ namespace SPARKIDesktopApp
             buttonFES.DialogResult = DialogResult.OK;
             buttonFreeRun.DialogResult = DialogResult.OK;
 
-            if (!profileLoaded)
-            {
-                // close app if closed during profile select
-                form.FormClosed += CloseAppOnCancel;
-            }
-
             // When therapeutic button is clicked
             buttonTherapeutic.Click += (s, e) => {
                 profileMode = Mode.Therapeutic;
@@ -207,7 +195,8 @@ namespace SPARKIDesktopApp
             // When FES button is clicked
             buttonFES.Click += (s, e) => {
                 profileMode = Mode.FES;
-                ChooseElectrodeNumber();
+                profileLoaded = true;
+                newProfile = true;
             };
 
             // When freerun button is clicked
@@ -253,9 +242,6 @@ namespace SPARKIDesktopApp
             loadButton.DialogResult = DialogResult.OK;
             newButton.DialogResult = DialogResult.OK;
 
-            // close app if closed during profile select
-            form.FormClosed += CloseAppOnCancel;
-
             // When New button is clicked
             newButton.Click += (s, e) => {
                 ChooseModeForProfile();
@@ -300,11 +286,6 @@ namespace SPARKIDesktopApp
             buttonOk.DialogResult = DialogResult.OK;
             buttonOk.Text = "OK";
 
-            if (!profileLoaded)
-            {
-                // close app if closed during profile select
-                form.FormClosed += CloseAppOnCancel;
-            }
 
             // Get number from textbox
             buttonOk.Click += (s, e) => {
@@ -333,7 +314,7 @@ namespace SPARKIDesktopApp
             var profileModeIn = header[0];
             numElectrodes = int.Parse(header[1]);
             if (profileModeIn == "Therapeutic")
-                profileMode = Mode.Therapeutic;
+                profileMode = Mode.Therapeutic; 
             else if (profileModeIn == "FES")
                 profileMode = Mode.FES;
             else if (profileModeIn == "FreeRun")
@@ -364,12 +345,14 @@ namespace SPARKIDesktopApp
             reader.Close();
         }
 
+        /*
         private void CloseAppOnCancel(object s, FormClosedEventArgs e)
         {
             if (!profileLoaded)
                 if (e.CloseReason == CloseReason.UserClosing)
                      Application.Exit();
         }
+        */
 
         private void SetValuesTherapeutic()
         {
@@ -395,7 +378,7 @@ namespace SPARKIDesktopApp
         {
             // set value fields
             freqTB.Text = "";
-            ampTB.Text = "";
+            rampingTimePulseWidthTB.Text = ""; 
             pulseWidthTB.Text = "";
             stimTimeTB.Text = "";
             rampingTimeFreqTB.Text = "";
@@ -411,7 +394,7 @@ namespace SPARKIDesktopApp
 
             // set value fields
             freqTB.Text = electrodes[currentElectrode].therapeuticValues[0] + "";
-            ampTB.Text = electrodes[currentElectrode].therapeuticValues[1] + "";
+            rampingTimePulseWidthTB.Text = electrodes[currentElectrode].therapeuticValues[1] + "";
             pulseWidthTB.Text = electrodes[currentElectrode].therapeuticValues[2] + "";
             stimTimeTB.Text = electrodes[currentElectrode].therapeuticValues[3] + "";
             rampingTimeFreqTB.Text = electrodes[currentElectrode].therapeuticValues[4] + "";
@@ -420,14 +403,23 @@ namespace SPARKIDesktopApp
             offTimeTB.Text = electrodes[currentElectrode].therapeuticValues[7] + "";
         }
 
-        public Form1()
+        public Therapeutic()
         {
-            ChooseLoadOrNew();
-            if (profileLoaded)
-            {
-                InitializeComponent();
-                SetValuesTherapeutic();
-            }
+            InitializeComponent();
+            
+        }
+
+        public void SetProfileName(string profileName)
+        {
+            this.profileName = profileName;
+        }
+
+        // SETUP FES MODE
+        private void SetupFES()
+        {
+            therapeuticTable.Visible = false;
+            electrodeDropdown.Visible = false;
+            profileModeLabel.Text = "FES";
         }
 
         // SAVE PROFILE
@@ -477,7 +469,7 @@ namespace SPARKIDesktopApp
             int i = -1;
             if ((sender as TextBox) == freqTB)
                 i = 0;
-            else if ((sender as TextBox) == ampTB)
+            else if ((sender as TextBox) == rampingTimePulseWidthTB)
                 i = 1;
             else if ((sender as TextBox) == pulseWidthTB)
                 i = 2;

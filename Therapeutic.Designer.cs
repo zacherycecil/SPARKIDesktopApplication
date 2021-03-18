@@ -1,7 +1,7 @@
 ﻿
 namespace SPARKIDesktopApp
 {
-    partial class Form1
+    partial class Therapeutic
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@ namespace SPARKIDesktopApp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.modeLabel = new System.Windows.Forms.Label();
             this.electrodeDropdown = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.therapeuticTable = new System.Windows.Forms.TableLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace SPARKIDesktopApp
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ampTB = new System.Windows.Forms.TextBox();
+            this.rampingTimePulseWidthTB = new System.Windows.Forms.TextBox();
             this.freqTB = new System.Windows.Forms.TextBox();
             this.rampingTimeFreqTB = new System.Windows.Forms.TextBox();
             this.pulseWidthTB = new System.Windows.Forms.TextBox();
@@ -67,7 +67,7 @@ namespace SPARKIDesktopApp
             this.profileNameLabel = new System.Windows.Forms.Label();
             this.profileModeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.therapeuticTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,50 +149,50 @@ namespace SPARKIDesktopApp
             this.electrodeDropdown.TabIndex = 6;
             this.electrodeDropdown.SelectedIndexChanged += new System.EventHandler(this.ElectrodeDropDown);
             // 
-            // tableLayoutPanel1
+            // therapeuticTable
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.71429F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.71429F));
-            this.tableLayoutPanel1.Controls.Add(this.label16, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ampTB, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.freqTB, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rampingTimeFreqTB, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pulseWidthTB, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.stimTimeTB, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.rampingTimeAmpTB, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.onTimeTB, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.offTimeTB, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(61, 287);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(731, 252);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.therapeuticTable.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.therapeuticTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.therapeuticTable.ColumnCount = 6;
+            this.therapeuticTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.therapeuticTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.therapeuticTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.71429F));
+            this.therapeuticTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.therapeuticTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.therapeuticTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.71429F));
+            this.therapeuticTable.Controls.Add(this.label16, 5, 3);
+            this.therapeuticTable.Controls.Add(this.label15, 4, 3);
+            this.therapeuticTable.Controls.Add(this.label14, 2, 3);
+            this.therapeuticTable.Controls.Add(this.label13, 1, 3);
+            this.therapeuticTable.Controls.Add(this.label12, 5, 2);
+            this.therapeuticTable.Controls.Add(this.label11, 4, 2);
+            this.therapeuticTable.Controls.Add(this.label10, 2, 2);
+            this.therapeuticTable.Controls.Add(this.label9, 1, 2);
+            this.therapeuticTable.Controls.Add(this.label8, 5, 1);
+            this.therapeuticTable.Controls.Add(this.label7, 4, 1);
+            this.therapeuticTable.Controls.Add(this.label6, 2, 1);
+            this.therapeuticTable.Controls.Add(this.label5, 1, 1);
+            this.therapeuticTable.Controls.Add(this.label4, 5, 0);
+            this.therapeuticTable.Controls.Add(this.label3, 4, 0);
+            this.therapeuticTable.Controls.Add(this.label2, 2, 0);
+            this.therapeuticTable.Controls.Add(this.rampingTimePulseWidthTB, 0, 1);
+            this.therapeuticTable.Controls.Add(this.freqTB, 0, 0);
+            this.therapeuticTable.Controls.Add(this.rampingTimeFreqTB, 3, 0);
+            this.therapeuticTable.Controls.Add(this.pulseWidthTB, 0, 2);
+            this.therapeuticTable.Controls.Add(this.stimTimeTB, 0, 3);
+            this.therapeuticTable.Controls.Add(this.rampingTimeAmpTB, 3, 1);
+            this.therapeuticTable.Controls.Add(this.onTimeTB, 3, 2);
+            this.therapeuticTable.Controls.Add(this.offTimeTB, 3, 3);
+            this.therapeuticTable.Controls.Add(this.label1, 1, 0);
+            this.therapeuticTable.Location = new System.Drawing.Point(61, 287);
+            this.therapeuticTable.Name = "therapeuticTable";
+            this.therapeuticTable.RowCount = 4;
+            this.therapeuticTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.therapeuticTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.therapeuticTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.therapeuticTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.therapeuticTable.Size = new System.Drawing.Size(731, 252);
+            this.therapeuticTable.TabIndex = 7;
             // 
             // label16
             // 
@@ -311,9 +311,9 @@ namespace SPARKIDesktopApp
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(112, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.Size = new System.Drawing.Size(209, 20);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Amplitude";
+            this.label6.Text = "Ramping Time (Pulse Width)";
             // 
             // label5
             // 
@@ -322,9 +322,9 @@ namespace SPARKIDesktopApp
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(59, 84);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 20);
+            this.label5.Size = new System.Drawing.Size(34, 20);
             this.label5.TabIndex = 19;
-            this.label5.Text = "mA";
+            this.label5.Text = "sec";
             // 
             // label4
             // 
@@ -359,17 +359,17 @@ namespace SPARKIDesktopApp
             this.label2.TabIndex = 16;
             this.label2.Text = "Frequency";
             // 
-            // ampTB
+            // rampingTimePulseWidthTB
             // 
-            this.ampTB.AccessibleDescription = "1";
-            this.ampTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ampTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ampTB.Location = new System.Drawing.Point(6, 80);
-            this.ampTB.Name = "ampTB";
-            this.ampTB.Size = new System.Drawing.Size(44, 29);
-            this.ampTB.TabIndex = 13;
-            this.ampTB.TextChanged += new System.EventHandler(this.propertyTextBox_TextChanged);
-            this.ampTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.propertyTextBox_KeyPress);
+            this.rampingTimePulseWidthTB.AccessibleDescription = "1";
+            this.rampingTimePulseWidthTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.rampingTimePulseWidthTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rampingTimePulseWidthTB.Location = new System.Drawing.Point(6, 80);
+            this.rampingTimePulseWidthTB.Name = "rampingTimePulseWidthTB";
+            this.rampingTimePulseWidthTB.Size = new System.Drawing.Size(44, 29);
+            this.rampingTimePulseWidthTB.TabIndex = 13;
+            this.rampingTimePulseWidthTB.TextChanged += new System.EventHandler(this.propertyTextBox_TextChanged);
+            this.rampingTimePulseWidthTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.propertyTextBox_KeyPress);
             // 
             // freqTB
             // 
@@ -527,7 +527,7 @@ namespace SPARKIDesktopApp
             this.Controls.Add(this.button4);
             this.Controls.Add(this.SyncLabel);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.therapeuticTable);
             this.Controls.Add(this.electrodeDropdown);
             this.Controls.Add(this.modeLabel);
             this.Controls.Add(this.pictureBox1);
@@ -538,8 +538,8 @@ namespace SPARKIDesktopApp
             this.Name = "Form1";
             this.Text = "S.P.A.R.K.I. Windows Desktop Application";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.therapeuticTable.ResumeLayout(false);
+            this.therapeuticTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -555,8 +555,8 @@ namespace SPARKIDesktopApp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label modeLabel;
         private System.Windows.Forms.ComboBox electrodeDropdown;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox ampTB;
+        private System.Windows.Forms.TableLayoutPanel therapeuticTable;
+        private System.Windows.Forms.TextBox rampingTimePulseWidthTB;
         private System.Windows.Forms.TextBox freqTB;
         private System.Windows.Forms.TextBox rampingTimeFreqTB;
         private System.Windows.Forms.TextBox pulseWidthTB;
