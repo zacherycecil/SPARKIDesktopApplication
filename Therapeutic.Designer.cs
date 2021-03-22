@@ -62,10 +62,12 @@ namespace SPARKIDesktopApp
             this.offTimeTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.SyncLabel = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.profileNameLabel = new System.Windows.Forms.Label();
             this.profileModeLabel = new System.Windows.Forms.Label();
+            this.SyncLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.debugInfoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.therapeuticTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -471,18 +473,6 @@ namespace SPARKIDesktopApp
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // SyncLabel
-            // 
-            this.SyncLabel.AutoSize = true;
-            this.SyncLabel.BackColor = System.Drawing.Color.Gray;
-            this.SyncLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SyncLabel.ForeColor = System.Drawing.Color.Red;
-            this.SyncLabel.Location = new System.Drawing.Point(736, 613);
-            this.SyncLabel.Name = "SyncLabel";
-            this.SyncLabel.Size = new System.Drawing.Size(210, 20);
-            this.SyncLabel.TabIndex = 9;
-            this.SyncLabel.Text = "There are unsaved changes.";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -492,7 +482,7 @@ namespace SPARKIDesktopApp
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 57);
             this.button4.TabIndex = 10;
-            this.button4.Text = "Sync with SPARKI";
+            this.button4.Text = "Update Device Data";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.SyncButton);
             // 
@@ -517,11 +507,45 @@ namespace SPARKIDesktopApp
             this.profileModeLabel.TabIndex = 12;
             this.profileModeLabel.Text = "Therapeutic";
             // 
-            // Form1
+            // SyncLabel
+            // 
+            this.SyncLabel.AutoSize = true;
+            this.SyncLabel.BackColor = System.Drawing.Color.Gray;
+            this.SyncLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SyncLabel.ForeColor = System.Drawing.Color.Red;
+            this.SyncLabel.Location = new System.Drawing.Point(736, 613);
+            this.SyncLabel.Name = "SyncLabel";
+            this.SyncLabel.Size = new System.Drawing.Size(210, 20);
+            this.SyncLabel.TabIndex = 9;
+            this.SyncLabel.Text = "There are unsaved changes.";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1047, 190);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 57);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Run Profile";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // debugInfoLabel
+            // 
+            this.debugInfoLabel.AutoSize = true;
+            this.debugInfoLabel.Location = new System.Drawing.Point(823, 287);
+            this.debugInfoLabel.Name = "debugInfoLabel";
+            this.debugInfoLabel.Size = new System.Drawing.Size(0, 13);
+            this.debugInfoLabel.TabIndex = 19;
+            // 
+            // Therapeutic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 736);
+            this.Controls.Add(this.debugInfoLabel);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.profileModeLabel);
             this.Controls.Add(this.profileNameLabel);
             this.Controls.Add(this.button4);
@@ -535,8 +559,9 @@ namespace SPARKIDesktopApp
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.saveButton);
-            this.Name = "Form1";
+            this.Name = "Therapeutic";
             this.Text = "S.P.A.R.K.I. Windows Desktop Application";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Therapeutic_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.therapeuticTable.ResumeLayout(false);
             this.therapeuticTable.PerformLayout();
@@ -581,10 +606,12 @@ namespace SPARKIDesktopApp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label SyncLabel;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label profileNameLabel;
         private System.Windows.Forms.Label profileModeLabel;
+        private System.Windows.Forms.Label SyncLabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label debugInfoLabel;
     }
 }
 

@@ -145,7 +145,7 @@ namespace SPARKIDesktopApp
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 57);
             this.button4.TabIndex = 10;
-            this.button4.Text = "Sync with SPARKI";
+            this.button4.Text = "Stream to SPARKI";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // profileNameLabel

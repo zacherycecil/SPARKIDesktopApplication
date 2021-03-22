@@ -345,15 +345,6 @@ namespace SPARKIDesktopApp
             reader.Close();
         }
 
-        /*
-        private void CloseAppOnCancel(object s, FormClosedEventArgs e)
-        {
-            if (!profileLoaded)
-                if (e.CloseReason == CloseReason.UserClosing)
-                     Application.Exit();
-        }
-        */
-
         private void SetValuesTherapeutic()
         {
             if (!newProfile)
@@ -409,47 +400,14 @@ namespace SPARKIDesktopApp
             
         }
 
-        public void SetProfileName(string profileName)
-        {
-            this.profileName = profileName;
-        }
-
-        // SETUP FES MODE
-        private void SetupFES()
-        {
-            therapeuticTable.Visible = false;
-            electrodeDropdown.Visible = false;
-            profileModeLabel.Text = "FES";
-        }
-
         // SAVE PROFILE
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateProfilesDirectory();
-
-            // Create prompt and get user input for name of profile
-            SaveProfilePopup("Save Profile", "Save profile as: ");
-            profileNameLabel.Text = profileName;
-
-            // Get data from profile to save to CSV
-            string data = profileMode + "," + numElectrodes;
-            foreach (Electrode electrode in electrodes)
+            FormSave myForm = new FormSave();
+            if (myForm.ShowDialog() == DialogResult.OK)
             {
-                data += "\n" + electrode.name;
-                foreach (int val in electrode.therapeuticValues)
-                    data += "," + val;
-            }
-
-            // Save data to csv file with profile name
-            File.WriteAllText("Profiles/" + profileName + ".csv", data);
-        }
-
-        private void CreateProfilesDirectory()
-        {
-            // Create folder for profiles
-            if (!Directory.Exists("Profiles"))
-            {
-                Directory.CreateDirectory("Profiles");
+                profileNameLabel.Text = myForm.profileName;
+                FileUtil.SaveTherapeuticProfile(myForm.profileName);
             }
         }
 
@@ -495,8 +453,11 @@ namespace SPARKIDesktopApp
 
         private void loadButton_Click(object sender, EventArgs e)
         {
-            CreateProfilesDirectory();
-            LoadProfilePopup();
+            FormLoad myForm = new FormLoad();
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                this.Hide();
+            }
         }
 
         private Electrode[] GetElectrodeArray(string[] names)
@@ -513,11 +474,10 @@ namespace SPARKIDesktopApp
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            ChooseModeForProfile();
-            Console.WriteLine(Mode.Therapeutic == profileMode);
-            if(profileMode == Mode.Therapeutic)
+            FormChooseProfileMode myForm = new FormChooseProfileMode();
+            if (myForm.ShowDialog() == DialogResult.OK)
             {
-                ChooseElectrodeNumber();
+                this.Hide();
             }
         }
         private void ElectrodeDropDown(object sender, EventArgs e)
@@ -528,13 +488,45 @@ namespace SPARKIDesktopApp
 
         private void SyncButton(object sender, EventArgs e)
         {
+            String address = "086698E94A11";
+            BluetoothDeviceInfo btDevice = null;
+            BluetoothAddress addr = new BluetoothAddress(new byte[] { 0x08, 0x66, 0x98, 0xE9, 0x4A, 0x11 });
+
             IReadOnlyCollection<BluetoothDeviceInfo> devices = client.DiscoverDevices();
-            SyncLabel.Text = "Devices found: " + devices.Count;
+            debugInfoLabel.Text = "Devices found: " + devices.Count;
             foreach (var device in devices)
             {
-                SyncLabel.Text += "\n" + device.DeviceName + " " + device.DeviceAddress;
+                debugInfoLabel.Text += "\n" + device.DeviceName + " " + device.DeviceAddress;
+                if (device.DeviceAddress.Equals(addr))
+                {
+                    btDevice = device;
+                }
+                debugInfoLabel.Text += "\nAddress compare: " + device.DeviceAddress + " | " + address;
             }
-            //BluetoothSecurity.PairRequest(device.DeviceAddress, "PIN");
+            // ADDRESS: 086698E94A11
+            if (btDevice != null)
+            {
+                BluetoothSecurity.PairRequest(btDevice.DeviceAddress, "PIN");
+
+                Guid service = BluetoothService.SerialPort;
+                client.Connect(addr, service);
+                Stream networkStream = client.GetStream();
+                Thread.Sleep(1000);
+
+                if (networkStream.CanWrite)
+                {
+                    byte[] buffer = Encoding.ASCII.GetBytes("Are you receiving this message?");
+                    networkStream.BeginWrite(buffer, 0, buffer.Length, null, networkStream);
+                }
+            }
+
+
+            // ...
+        }
+
+        private void Therapeutic_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 

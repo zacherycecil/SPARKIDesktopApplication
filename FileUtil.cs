@@ -59,6 +59,15 @@ namespace SPARKIDesktopApp
             File.WriteAllText("Profiles/" + profileName + ".csv", data);
         }
 
+        public static void SaveTherapeuticProfile(string profileName)
+        {
+            // Get data from profile to save to CSV
+            string data = "Therapeutic";
+
+            // Save data to csv file with profile name
+            File.WriteAllText("Profiles/" + profileName + ".csv", data);
+        }
+
         public static string[] GetFESProfileData(string profileName)
         {
             return new[] { "h" };
