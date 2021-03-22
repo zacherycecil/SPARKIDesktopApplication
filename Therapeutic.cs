@@ -500,13 +500,14 @@ namespace SPARKIDesktopApp
                 if (device.DeviceAddress.Equals(addr))
                 {
                     btDevice = device;
+                    debugInfoLabel.Text += "\nFOUND SPARKI!!! maby";
                 }
-                debugInfoLabel.Text += "\nAddress compare: " + device.DeviceAddress + " | " + address;
+                debugInfoLabel.Text += "\nAddress compare: " + device.DeviceAddress + " | " + addr;
             }
             // ADDRESS: 086698E94A11
             if (btDevice != null)
             {
-                debugInfoLabel.Text += "" + BluetoothSecurity.PairRequest(btDevice.DeviceAddress, "PIN");
+                debugInfoLabel.Text += "\n" + BluetoothSecurity.PairRequest(btDevice.DeviceAddress, "PIN");
 
                 Guid service = BluetoothService.SerialPort;
                 client.Connect(addr, service);
@@ -515,8 +516,8 @@ namespace SPARKIDesktopApp
 
                 if (networkStream.CanWrite)
                 {
-                    byte[] buffer = Encoding.ASCII.GetBytes("Are you receiving this message?");
-                    networkStream.BeginWrite(buffer, 0, buffer.Length, null, networkStream);
+                    byte[] buffer = { 0xFF };
+                    debugInfoLabel.Text += "\n" + networkStream.BeginWrite(buffer, 0, buffer.Length, null, networkStream);
                 }
             }
 
