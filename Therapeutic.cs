@@ -506,7 +506,7 @@ namespace SPARKIDesktopApp
             // ADDRESS: 086698E94A11
             if (btDevice != null)
             {
-                BluetoothSecurity.PairRequest(btDevice.DeviceAddress, "PIN");
+                debugInfoLabel.Text += "" + BluetoothSecurity.PairRequest(btDevice.DeviceAddress, "PIN");
 
                 Guid service = BluetoothService.SerialPort;
                 client.Connect(addr, service);
