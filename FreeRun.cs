@@ -22,14 +22,12 @@ namespace SPARKIDesktopApp
 
     public partial class FreeRun : Form
     {
-        public string profileName { get; set; }
+        public ProfileData data;
 
         public FreeRun()
         {
             InitializeComponent();
-
-            if (profileName != null)
-                profileNameLabel.Text = profileName;
+            unsavedChangeLabel.Text = "";
 
             // Set Macro combo box
             string[] macroNames = FileUtil.GetMacroFileNames();
@@ -37,13 +35,25 @@ namespace SPARKIDesktopApp
                 macroCB.Items.Add(name);
         }
 
+        public void SetupForm()
+        {
+            macroCB.SelectedItem = data.macro;
+            SetProfileNameLabel();
+        }
+
+        public void SetProfileNameLabel()
+        {
+            profileNameLabel.Text = data.profileName;
+        }
+
         private void saveButton_Click(object sender, EventArgs e)
         {
             FormSave myForm = new FormSave();
             if (myForm.ShowDialog() == DialogResult.OK)
             {
-                profileNameLabel.Text = myForm.profileName;
+                data.profileName = myForm.profileName;
                 FileUtil.SaveFreeRunProfile(myForm.profileName, macroCB.Text);
+                SetupForm();
             }
         }
 
@@ -63,6 +73,11 @@ namespace SPARKIDesktopApp
             {
                 this.Hide();
             }
+        }
+
+        private void FreeRunFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

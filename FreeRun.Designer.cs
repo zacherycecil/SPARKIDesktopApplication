@@ -36,7 +36,7 @@ namespace SPARKIDesktopApp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.modeLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.SyncLabel = new System.Windows.Forms.Label();
+            this.unsavedChangeLabel = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.profileNameLabel = new System.Windows.Forms.Label();
             this.profileModeLabel = new System.Windows.Forms.Label();
@@ -124,17 +124,16 @@ namespace SPARKIDesktopApp
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // SyncLabel
+            // unsavedChangeLabel
             // 
-            this.SyncLabel.AutoSize = true;
-            this.SyncLabel.BackColor = System.Drawing.Color.Gray;
-            this.SyncLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SyncLabel.ForeColor = System.Drawing.Color.Red;
-            this.SyncLabel.Location = new System.Drawing.Point(736, 613);
-            this.SyncLabel.Name = "SyncLabel";
-            this.SyncLabel.Size = new System.Drawing.Size(210, 20);
-            this.SyncLabel.TabIndex = 9;
-            this.SyncLabel.Text = "There are unsaved changes.";
+            this.unsavedChangeLabel.AutoSize = true;
+            this.unsavedChangeLabel.BackColor = System.Drawing.Color.Gray;
+            this.unsavedChangeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unsavedChangeLabel.ForeColor = System.Drawing.Color.Red;
+            this.unsavedChangeLabel.Location = new System.Drawing.Point(736, 613);
+            this.unsavedChangeLabel.Name = "unsavedChangeLabel";
+            this.unsavedChangeLabel.Size = new System.Drawing.Size(0, 20);
+            this.unsavedChangeLabel.TabIndex = 9;
             // 
             // button4
             // 
@@ -200,7 +199,7 @@ namespace SPARKIDesktopApp
             this.Controls.Add(this.profileModeLabel);
             this.Controls.Add(this.profileNameLabel);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.SyncLabel);
+            this.Controls.Add(this.unsavedChangeLabel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.modeLabel);
             this.Controls.Add(this.pictureBox1);
@@ -210,6 +209,7 @@ namespace SPARKIDesktopApp
             this.Controls.Add(this.saveButton);
             this.Name = "FreeRun";
             this.Text = "S.P.A.R.K.I. Windows Desktop Application";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FreeRunFormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -226,7 +226,7 @@ namespace SPARKIDesktopApp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label modeLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label SyncLabel;
+        private System.Windows.Forms.Label unsavedChangeLabel;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label profileNameLabel;
         private System.Windows.Forms.Label profileModeLabel;

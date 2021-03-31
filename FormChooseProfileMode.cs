@@ -21,6 +21,8 @@ namespace SPARKIDesktopApp
         {
             var myForm = new Therapeutic();
             myForm.Show();
+            myForm.data = new ProfileData("New Profile");
+            myForm.SetupForm();
             this.DialogResult = DialogResult.OK;
             this.Hide();
         }
@@ -29,6 +31,8 @@ namespace SPARKIDesktopApp
         {
             var myForm = new FES();
             myForm.Show();
+            myForm.data = new ProfileData("New Profile");
+            myForm.SetupForm();
             this.DialogResult = DialogResult.OK;
             this.Hide();
         }
@@ -37,6 +41,8 @@ namespace SPARKIDesktopApp
         {
             var myForm = new FreeRun();
             myForm.Show();
+            myForm.data = new ProfileData("New Profile");
+            myForm.SetupForm();
             this.DialogResult = DialogResult.OK;
             this.Hide();
         }

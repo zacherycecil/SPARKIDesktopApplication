@@ -24,21 +24,31 @@ namespace SPARKIDesktopApp
             if (mode == "Therapeutic")
             {
                 var myForm = new Therapeutic();
-                myForm.profileName = profileName;
                 myForm.Show();
+                ProfileData profileData = new ProfileData(profileName, FileUtil.GetTherapeuticProfileData(profileName));
+                myForm.data = profileData;
+                myForm.SetupForm();
                 this.Hide();
             }
             else if (mode == "FES")
             {
                 var myForm = new FES();
-                myForm.SetProfileNameLabel(profileName);
-                myForm.Show();
-                this.Hide();
+                string[] freeRunParams = FileUtil.GetFESProfileData(profileName);
+                if (freeRunParams != null)
+                {
+                    ProfileData profileData = new ProfileData(profileName, freeRunParams[0], freeRunParams[1]);
+                    myForm.data = profileData;
+                    myForm.SetupForm();
+                    myForm.Show();
+                    this.Hide();
+                }
             }
             else if (mode == "FreeRun")
             {
                 var myForm = new FreeRun();
-                myForm.profileName = profileName;
+                ProfileData profileData = new ProfileData(profileName, FileUtil.GetFreeRunProfileData(profileName));
+                myForm.data = profileData;
+                myForm.SetupForm();
                 myForm.Show();
                 this.Hide();
             }
@@ -47,13 +57,14 @@ namespace SPARKIDesktopApp
 
         private void loadComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // if profile is chosen, enable load button
-            if (profileName != "<none>")
-                loadButton.Enabled = true;
-
             // get name of file selected
             profileName = (sender as ComboBox).Text;
             profileName = profileName.Substring(0, profileName.Length - 4);
+
+            // if profile is chosen, enable load button
+            if (profileName != null && profileName != "<none>")
+                loadButton.Enabled = true;
+
         }
 
         private string GetModeFromCSV()
@@ -61,6 +72,7 @@ namespace SPARKIDesktopApp
             // read CSV values from file
             var reader = new StreamReader("Profiles/" + profileName + ".csv");
             var header = reader.ReadLine().Split(',');
+            reader.Close();
             return header[0];
         }
     }

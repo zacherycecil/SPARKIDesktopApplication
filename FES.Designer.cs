@@ -44,7 +44,6 @@ namespace SPARKIDesktopApp
             this.label1 = new System.Windows.Forms.Label();
             this.macroCB = new System.Windows.Forms.ComboBox();
             this.triggerCB = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -214,24 +213,11 @@ namespace SPARKIDesktopApp
             this.triggerCB.Size = new System.Drawing.Size(239, 28);
             this.triggerCB.TabIndex = 16;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1047, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 57);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Run Profile";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // FES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 736);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.triggerCB);
             this.Controls.Add(this.macroCB);
             this.Controls.Add(this.label1);
@@ -249,6 +235,7 @@ namespace SPARKIDesktopApp
             this.Controls.Add(this.saveButton);
             this.Name = "FES";
             this.Text = "S.P.A.R.K.I. Windows Desktop Application";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FESFormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -273,7 +260,6 @@ namespace SPARKIDesktopApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox macroCB;
         private System.Windows.Forms.ComboBox triggerCB;
-        private System.Windows.Forms.Button button1;
     }
 }
 

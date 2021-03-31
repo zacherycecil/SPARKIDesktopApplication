@@ -65,8 +65,7 @@ namespace SPARKIDesktopApp
             this.button4 = new System.Windows.Forms.Button();
             this.profileNameLabel = new System.Windows.Forms.Label();
             this.profileModeLabel = new System.Windows.Forms.Label();
-            this.SyncLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.unsavedChangesLabel = new System.Windows.Forms.Label();
             this.debugInfoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.therapeuticTable.SuspendLayout();
@@ -507,29 +506,16 @@ namespace SPARKIDesktopApp
             this.profileModeLabel.TabIndex = 12;
             this.profileModeLabel.Text = "Therapeutic";
             // 
-            // SyncLabel
+            // unsavedChangesLabel
             // 
-            this.SyncLabel.AutoSize = true;
-            this.SyncLabel.BackColor = System.Drawing.Color.Gray;
-            this.SyncLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SyncLabel.ForeColor = System.Drawing.Color.Red;
-            this.SyncLabel.Location = new System.Drawing.Point(736, 613);
-            this.SyncLabel.Name = "SyncLabel";
-            this.SyncLabel.Size = new System.Drawing.Size(210, 20);
-            this.SyncLabel.TabIndex = 9;
-            this.SyncLabel.Text = "There are unsaved changes.";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1047, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 57);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Run Profile";
-            this.button1.UseVisualStyleBackColor = false;
+            this.unsavedChangesLabel.AutoSize = true;
+            this.unsavedChangesLabel.BackColor = System.Drawing.Color.Gray;
+            this.unsavedChangesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unsavedChangesLabel.ForeColor = System.Drawing.Color.Red;
+            this.unsavedChangesLabel.Location = new System.Drawing.Point(736, 613);
+            this.unsavedChangesLabel.Name = "unsavedChangesLabel";
+            this.unsavedChangesLabel.Size = new System.Drawing.Size(0, 20);
+            this.unsavedChangesLabel.TabIndex = 9;
             // 
             // debugInfoLabel
             // 
@@ -545,11 +531,10 @@ namespace SPARKIDesktopApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 736);
             this.Controls.Add(this.debugInfoLabel);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.profileModeLabel);
             this.Controls.Add(this.profileNameLabel);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.SyncLabel);
+            this.Controls.Add(this.unsavedChangesLabel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.therapeuticTable);
             this.Controls.Add(this.electrodeDropdown);
@@ -609,8 +594,7 @@ namespace SPARKIDesktopApp
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label profileNameLabel;
         private System.Windows.Forms.Label profileModeLabel;
-        private System.Windows.Forms.Label SyncLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label unsavedChangesLabel;
         private System.Windows.Forms.Label debugInfoLabel;
     }
 }
