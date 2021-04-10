@@ -483,6 +483,7 @@ namespace SPARKIDesktopApp
             this.button4.TabIndex = 10;
             this.button4.Text = "Update Device Data";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.SyncButton);
             // 
             // profileNameLabel

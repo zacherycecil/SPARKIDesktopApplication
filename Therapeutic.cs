@@ -25,7 +25,7 @@ namespace SPARKIDesktopApp
         public ProfileData data;
         public int currentElectrode;
 
-
+        public BluetoothClient client = new BluetoothClient();
         public Therapeutic()
         {
             InitializeComponent();
@@ -154,7 +154,7 @@ namespace SPARKIDesktopApp
 
         private void SyncButton(object sender, EventArgs e)
         {
-            /*
+            
             String address = "086698E94A11";
             BluetoothDeviceInfo btDevice = null;
             BluetoothAddress addr = new BluetoothAddress(new byte[] { 0x08, 0x66, 0x98, 0xE9, 0x4A, 0x11 });
@@ -190,7 +190,7 @@ namespace SPARKIDesktopApp
 
 
             // ...
-            */
+            
         }
 
         private void Therapeutic_FormClosed(object sender, FormClosedEventArgs e)

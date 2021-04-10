@@ -146,6 +146,7 @@ namespace SPARKIDesktopApp
             this.button4.TabIndex = 10;
             this.button4.Text = "Stream to SPARKI";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             // 
             // profileNameLabel
             // 

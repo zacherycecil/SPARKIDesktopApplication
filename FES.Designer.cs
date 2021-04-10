@@ -134,9 +134,8 @@ namespace SPARKIDesktopApp
             this.SyncLabel.ForeColor = System.Drawing.Color.Red;
             this.SyncLabel.Location = new System.Drawing.Point(736, 613);
             this.SyncLabel.Name = "SyncLabel";
-            this.SyncLabel.Size = new System.Drawing.Size(210, 20);
+            this.SyncLabel.Size = new System.Drawing.Size(0, 20);
             this.SyncLabel.TabIndex = 9;
-            this.SyncLabel.Text = "There are unsaved changes.";
             // 
             // button4
             // 
@@ -149,6 +148,7 @@ namespace SPARKIDesktopApp
             this.button4.TabIndex = 10;
             this.button4.Text = "Update Device Data";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             // 
             // profileNameLabel
             // 
